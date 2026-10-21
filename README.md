@@ -20,7 +20,7 @@ The platform will use conventional software logic, structured data, financial ca
 
 **Status:** Planning and requirements definition
 
-The features and architecture described in this README represent the intended product and development direction. They should not be interpreted as evidence that every feature has already been implemented or deployed.
+The repository currently contains a static frontend prototype in `frontend/`, including a landing page, dashboard, login, signup, and demo screens for sales corrections, inventory movements, customer repayments, purchases and suppliers, expenses, reports, staff roles, audit activity, automation, read-only MCP integrations, and security settings. The screens use sample data; authentication, persistence, authorization, scheduled jobs, external integrations, backups, and security controls are not connected to a backend. The features and architecture described in this README represent the intended product and development direction and should not be interpreted as evidence that every feature has already been implemented or deployed.
 
 ## 2. Vision and Mission
 
@@ -1123,7 +1123,7 @@ The objective is not simply to build a large collection of features. It is to bu
 
 ---
 
-**Project:** Mzima BizPort  
+**Project:** Mzima BizPort
 **Organization:** Mzima  
 **Initial market:** Small retail shops and mini-markets in Nairobi, Kenya  
 **Platform:** Mobile-friendly web application  
