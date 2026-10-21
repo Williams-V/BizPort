@@ -6,11 +6,11 @@
 
 ## 1. Project Overview
 
-**Mzima BizPilot** is a planned, mobile-friendly business management web application designed to help small and medium-sized enterprises (SMEs) in Kenya manage their daily operations, monitor financial performance, control inventory, track customer debts, and make informed business decisions using accurate business records.
+**Mzima BizPort** is a planned, mobile-friendly business management web application designed to help small and medium-sized enterprises (SMEs) in Kenya manage their daily operations, monitor financial performance, control inventory, track customer debts, and make informed business decisions using accurate business records.
 
 Many small businesses manage sales, expenses, stock, supplier payments, and customer credit using notebooks, spreadsheets, calculators, or disconnected applications. This can make it difficult to understand actual business performance, identify stock shortages, follow up on outstanding debts, and maintain reliable records.
 
-Mzima BizPilot aims to bring these activities into one organized system.
+Mzima BizPort aims to bring these activities into one organized system.
 
 The initial target market is **small retail shops and mini-markets in Nairobi, Kenya**, with the possibility of expanding to other business categories after validating the product with real customers.
 
@@ -34,7 +34,7 @@ To develop an accessible platform that simplifies business record-keeping, impro
 
 ## 3. Objectives
 
-Mzima BizPilot aims to:
+Mzima BizPort aims to:
 
 - Centralize sales, purchases, inventory, expenses, and debt records.
 - Help business owners understand sales, costs, and estimated profit.
@@ -229,7 +229,7 @@ The platform must not promise delivery through an external service until that in
 
 ## 6. Automated Workflows
 
-Automation is a core part of BizPilot. It will reduce repetitive tasks through explicit rules and controlled background processing.
+Automation is a core part of BizPort. It will reduce repetitive tasks through explicit rules and controlled background processing.
 
 ### Workflow 1: Low-stock alert
 
@@ -301,11 +301,11 @@ A simple scheduler may be sufficient for the initial MVP. A queue and worker sys
 
 ## 7. MCP Integration
 
-### What MCP means for BizPilot
+### What MCP means for BizPort
 
 Model Context Protocol (MCP) is a standard for exposing selected application capabilities and data to compatible external clients.
 
-BizPilot will plan for an MCP server that provides controlled access to approved business information. MCP is an integration capability, not a requirement for ordinary shop owners to use an AI assistant.
+BizPort will plan for an MCP server that provides controlled access to approved business information. MCP is an integration capability, not a requirement for ordinary shop owners to use an AI assistant.
 
 The core web application must remain fully usable without MCP.
 
@@ -338,7 +338,7 @@ MCP must not bypass the application's normal business rules or permissions.
 
 ## 8. User Roles and Permissions
 
-BizPilot will use role-based access control. The following roles describe the intended system permissions and responsibilities.
+BizPort will use role-based access control. The following roles describe the intended system permissions and responsibilities.
 
 | Role | Main responsibilities and access |
 |---|---|
@@ -546,7 +546,7 @@ The amount owed to a supplier, calculated from recorded purchases, payments, cre
 
 ## 13. Security, Privacy, and Compliance
 
-BizPilot will handle potentially sensitive business and customer information. Security and privacy must be built into the application from the beginning.
+BizPort will handle potentially sensitive business and customer information. Security and privacy must be built into the application from the beginning.
 
 Planned safeguards include:
 
@@ -626,6 +626,14 @@ No production release should depend solely on the fact that the application star
 ## 15. Development-Team Roles
 
 The project will be developed collaboratively, with clear ownership of responsibilities. Team members may take on multiple roles depending on their skills and availability.
+
+### Team Assignments
+
+| Team member | Assigned area | Scope |
+|---|---|---|
+| Christian Tazma | Backend | Backend implementation, API, and business logic. |
+| Vanessa | Frontend | Frontend application, interface, and user-facing screens. |
+| Kisiwani Topsyy | Remaining project work | Data and SQL, database work, and other project areas not assigned above. |
 
 ### 15.1 Project Lead / Product Owner
 
@@ -707,7 +715,7 @@ Responsibilities:
 
 ### 15.6 MCP Integration Engineer
 
-**Main responsibility:** Expose approved BizPilot capabilities through MCP.
+**Main responsibility:** Expose approved BizPort capabilities through MCP.
 
 Responsibilities:
 
@@ -720,7 +728,7 @@ Responsibilities:
 - Test MCP behavior with compatible clients.
 - Maintain clear boundaries between the MCP layer and core business logic.
 
-This role can be combined with backend development or automation engineering. It does not require building an AI assistant into BizPilot.
+This role can be combined with backend development or automation engineering. It does not require building an AI assistant into BizPort.
 
 ### 15.7 UI/UX Designer
 
@@ -819,14 +827,14 @@ The team should agree on one branching strategy and apply it consistently.
 7. Review code, requirements, and potential regressions.
 8. Resolve feedback and merge after approval.
 
-Existing Mzima website code and deployment configuration must not be changed unintentionally. BizPilot should use an explicitly agreed repository and branch structure.
+Existing Mzima website code and deployment configuration must not be changed unintentionally. BizPort should use an explicitly agreed repository and branch structure.
 
 ## 17. Suggested Repository Structure
 
 The following is a proposed structure, not a description of files that already exist.
 
 ```text
-mzima-bizpilot/
+mzima-bizport/
 ├── frontend/
 │   ├── app/
 │   ├── components/
@@ -1097,25 +1105,25 @@ A feature should not be described as production-ready merely because development
 
 The project's intellectual property ownership, contribution terms, and distribution permissions must be documented explicitly.
 
-If Mzima intends to keep BizPilot proprietary, the repository should use an appropriate proprietary license notice approved by the project owners. A README alone does not establish all legal ownership rights or replace the actual `LICENSE` file.
+If Mzima intends to keep BizPort proprietary, the repository should use an appropriate proprietary license notice approved by the project owners. A README alone does not establish all legal ownership rights or replace the actual `LICENSE` file.
 
 Third-party libraries and services must be used in accordance with their applicable licenses and terms.
 
 ## 27. About Mzima
 
-**Mzima** is the software company behind the BizPilot project. The project is intended to apply practical software engineering to real operational problems faced by Kenyan businesses.
+**Mzima** is the software company behind the BizPort project. The project is intended to apply practical software engineering to real operational problems faced by Kenyan businesses.
 
-BizPilot will be developed through collaborative planning, implementation, testing, and feedback from the businesses it aims to serve.
+BizPort will be developed through collaborative planning, implementation, testing, and feedback from the businesses it aims to serve.
 
 ## 28. Final Project Principle
 
-Mzima BizPilot should prioritize **accuracy, usability, security, and real customer value** over unnecessary complexity.
+Mzima BizPort should prioritize **accuracy, usability, security, and real customer value** over unnecessary complexity.
 
 The objective is not simply to build a large collection of features. It is to build a dependable system that helps a business owner understand what has happened in the business, identify what requires attention, maintain better records, and manage everyday operations more effectively.
 
 ---
 
-**Project:** Mzima BizPilot  
+**Project:** Mzima BizPort  
 **Organization:** Mzima  
 **Initial market:** Small retail shops and mini-markets in Nairobi, Kenya  
 **Platform:** Mobile-friendly web application  

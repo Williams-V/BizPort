@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#174b38" />
+    <meta name="description" content="BizPort business overview dashboard" />
+    <title>BizPort | Business overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#overview" aria-label="BizPort overview">
+          <span class="brand-mark" aria-hidden="true">B</span>
+          <span class="brand-name">bizport<span>.</span></span>
+        </a>
+
+        <div class="workspace-label">WORKSPACE</div>
+        <div class="business-switcher">
+          <span class="business-avatar">M</span>
+          <span class="business-copy"><strong>Mwangaza Market</strong><small>Nairobi, Kenya</small></span>
+          <span class="switch-chevron" aria-hidden="true">⌄</span>
+        </div>
+
+        <nav class="nav-list">
+          <a class="nav-link active" href="#overview"><span class="nav-symbol overview-symbol" aria-hidden="true"></span><span>Overview</span></a>
+          <a class="nav-link" href="#sales"><span class="nav-symbol sales-symbol" aria-hidden="true"></span><span>Sales</span><span class="nav-count">12</span></a>
+          <a class="nav-link" href="#inventory"><span class="nav-symbol inventory-symbol" aria-hidden="true"></span><span>Inventory</span><span class="nav-dot" aria-label="Stock alerts"></span></a>
+          <a class="nav-link" href="#customers"><span class="nav-symbol customers-symbol" aria-hidden="true"></span><span>Customers</span></a>
+          <a class="nav-link" href="#reports"><span class="nav-symbol reports-symbol" aria-hidden="true"></span><span>Reports</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="help-note"><span class="help-mark">?</span><span><strong>Need a hand?</strong><small>Visit the help centre</small></span><span aria-hidden="true">↗</span></div>
+          <button class="profile-button" type="button" aria-label="Account settings">
+            <span class="profile-avatar">VK</span>
+            <span class="profile-copy"><strong>Vanessa K.</strong><small>Business owner</small></span>
+            <span class="profile-menu" aria-hidden="true">···</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <div class="breadcrumb"><span>Workspace</span><span class="breadcrumb-divider">/</span><strong>Overview</strong></div>
+          <div class="topbar-actions">
+            <span class="demo-label"><span></span> Demo data</span>
+            <button class="icon-button notification-button" type="button" aria-label="Notifications"><span class="bell-shape" aria-hidden="true"></span><i></i></button>
+            <button class="mobile-profile" type="button" aria-label="Account settings">VK</button>
+          </div>
+        </header>
+
+        <div class="page-content">
+          <section class="page-heading">
+            <div>
+              <p class="eyebrow">WEDNESDAY, 21 OCTOBER 2026 <span class="eyebrow-line"></span></p>
+              <h1>Good morning, Vanessa<span>.</span></h1>
+              <p class="heading-subtitle">Here’s what’s happening at Mwangaza Market today.</p>
+            </div>
+            <button class="primary-button" id="open-sale" type="button"><span class="plus-mark" aria-hidden="true">+</span> New sale</button>
+          </section>
+
+          <section class="metrics-grid" aria-label="Business summary">
+            <article class="metric-card metric-sales">
+              <div class="metric-top"><span>Sales today</span><span class="metric-glyph">↗</span></div>
+              <strong class="metric-value">KES <span id="sales-total">42,680</span></strong>
+              <div class="metric-foot"><span class="trend-up">↑ 14.8%</span><span>vs. yesterday</span><span class="metric-sparkline spark-green" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top"><span>Gross profit</span><span class="metric-glyph">◒</span></div>
+              <strong class="metric-value">KES 11,420</strong>
+              <div class="metric-foot"><span class="trend-up">↑ 8.2%</span><span>vs. yesterday</span><span class="metric-sparkline spark-red" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top"><span>Customer credit</span><span class="metric-glyph">◷</span></div>
+              <strong class="metric-value">KES 18,500</strong>
+              <div class="metric-foot"><span class="metric-context">8 customers</span><span>with outstanding balances</span></div>
+            </article>
+            <article class="metric-card metric-alert">
+              <div class="metric-top"><span>Low stock items</span><span class="metric-glyph alert-glyph">!</span></div>
+              <strong class="metric-value">06 <small>items</small></strong>
+              <div class="metric-foot"><span class="alert-context">Needs attention</span><a href="#inventory">Review stock <span aria-hidden="true">→</span></a></div>
+            </article>
+          </section>
+
+          <section class="content-grid" id="reports">
+            <article class="panel sales-panel">
+              <div class="panel-heading">
+                <div><p class="section-kicker">PERFORMANCE</p><h2>Sales overview</h2></div>
+                <label class="select-wrap"><span class="sr-only">Chart date range</span><select id="range-select"><option value="week">This week</option><option value="month">This month</option><option value="quarter">This quarter</option></select></label>
+              </div>
+              <div class="chart-summary"><strong>KES <span id="chart-total">246,320</span></strong><span class="chart-change">↑ 12.6% <small>vs. previous period</small></span></div>
+              <div class="chart-wrap"><canvas id="sales-chart" aria-label="Sales trend chart" role="img"></canvas><div class="chart-tooltip" id="chart-tooltip" aria-hidden="true"></div></div>
+              <div class="chart-legend"><span><i class="legend-current"></i> This period</span><span><i class="legend-previous"></i> Previous period</span></div>
+            </article>
+
+            <article class="panel stock-panel" id="inventory">
+              <div class="panel-heading">
+                <div><p class="section-kicker">INVENTORY</p><h2>Running low</h2></div>
+                <a class="text-link" href="#inventory-list">View all <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="stock-list" id="inventory-list">
+                <div class="stock-row"><span class="product-thumb thumb-maize">M</span><span class="stock-product"><strong>Maize flour 2kg</strong><small>SKU 00482</small></span><span class="stock-level"><strong>4</strong><small>left</small></span><span class="stock-status critical">Restock</span></div>
+                <div class="stock-row"><span class="product-thumb thumb-oil">O</span><span class="stock-product"><strong>Cooking oil 1L</strong><small>SKU 00136</small></span><span class="stock-level"><strong>6</strong><small>left</small></span><span class="stock-status critical">Restock</span></div>
+                <div class="stock-row"><span class="product-thumb thumb-sugar">S</span><span class="stock-product"><strong>White sugar 1kg</strong><small>SKU 00671</small></span><span class="stock-level"><strong>8</strong><small>left</small></span><span class="stock-status watch">Low</span></div>
+                <div class="stock-row"><span class="product-thumb thumb-rice">R</span><span class="stock-product"><strong>Pishori rice 2kg</strong><small>SKU 00904</small></span><span class="stock-level"><strong>9</strong><small>left</small></span><span class="stock-status watch">Low</span></div>
+              </div>
+            </article>
+          </section>
+
+          <section class="content-grid lower-grid">
+            <article class="panel transactions-panel" id="sales">
+              <div class="panel-heading transaction-heading">
+                <div><p class="section-kicker">ACTIVITY</p><h2>Recent sales</h2></div>
+                <div class="table-actions"><label class="search-box"><span class="search-icon" aria-hidden="true"></span><input type="search" id="sales-search" placeholder="Search sales" aria-label="Search sales" /></label><button class="icon-button export-button" id="export-sales" type="button" aria-label="Export sales as CSV" title="Export CSV"><span aria-hidden="true">↓</span></button></div>
+              </div>
+              <div class="table-scroll"><table><thead><tr><th>TRANSACTION</th><th>CUSTOMER</th><th>PAYMENT</th><th>TIME</th><th class="align-right">AMOUNT</th></tr></thead><tbody id="sales-rows">
+                <tr><td><span class="transaction-id">#BP-24018</span></td><td><span class="customer-cell"><span class="customer-avatar avatar-rose">JM</span>James M.</span></td><td><span class="payment-type cash">Cash</span></td><td class="muted-cell">10:42 am</td><td class="align-right amount-cell">KES 2,450</td></tr>
+                <tr><td><span class="transaction-id">#BP-24017</span></td><td><span class="customer-cell"><span class="customer-avatar avatar-green">AW</span>Anne W.</span></td><td><span class="payment-type mpesa">M-Pesa</span></td><td class="muted-cell">10:18 am</td><td class="align-right amount-cell">KES 860</td></tr>
+                <tr><td><span class="transaction-id">#BP-24016</span></td><td><span class="customer-cell"><span class="customer-avatar avatar-yellow">CK</span>Charles K.</span></td><td><span class="payment-type credit">Credit</span></td><td class="muted-cell">9:56 am</td><td class="align-right amount-cell">KES 3,200</td></tr>
+                <tr><td><span class="transaction-id">#BP-24015</span></td><td><span class="customer-cell"><span class="customer-avatar avatar-blue">FN</span>Faith N.</span></td><td><span class="payment-type mpesa">M-Pesa</span></td><td class="muted-cell">9:31 am</td><td class="align-right amount-cell">KES 1,175</td></tr>
+              </tbody></table><p class="empty-search" id="empty-search" hidden>No sales match your search.</p></div>
+              <a class="panel-footer-link" href="#sales">View all sales <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="panel customers-panel" id="customers">
+              <div class="panel-heading"><div><p class="section-kicker">FOLLOW-UP</p><h2>Customer balances</h2></div><a class="text-link" href="#customers">View all <span aria-hidden="true">→</span></a></div>
+              <div class="balance-list">
+                <div class="balance-row"><span class="customer-avatar avatar-blue">PO</span><span class="balance-customer"><strong>Peter O.</strong><small>Due today</small></span><strong class="balance-amount">KES 4,800</strong></div>
+                <div class="balance-row"><span class="customer-avatar avatar-yellow">GN</span><span class="balance-customer"><strong>Grace N.</strong><small>Due in 2 days</small></span><strong class="balance-amount">KES 2,350</strong></div>
+                <div class="balance-row"><span class="customer-avatar avatar-rose">DM</span><span class="balance-customer"><strong>David M.</strong><small class="overdue-label">3 days overdue</small></span><strong class="balance-amount">KES 1,900</strong></div>
+              </div>
+              <div class="balance-total"><span>Total outstanding</span><strong>KES 18,500</strong></div>
+            </article>
+          </section>
+
+          <footer class="page-footer"><span>BizPort <span class="footer-dot">/</span> Business overview</span><span>Amounts shown in KES <span class="footer-dot">·</span> Nairobi time</span></footer>
+        </div>
+      </main>
+    </div>
+
+    <dialog class="sale-dialog" id="sale-dialog" aria-labelledby="sale-title">
+      <form id="sale-form" method="dialog">
+        <div class="dialog-heading"><div><p class="section-kicker">NEW TRANSACTION</p><h2 id="sale-title">Record a sale</h2></div><button class="dialog-close" type="button" id="close-sale" aria-label="Close">×</button></div>
+        <label class="form-field">Customer <span class="optional-label">Optional</span><input name="customer" placeholder="Walk-in customer" /></label>
+        <label class="form-field">Amount <span class="required-mark">*</span><div class="amount-input"><span>KES</span><input name="amount" type="number" min="1" step="1" placeholder="0" required /></div></label>
+        <label class="form-field">Payment method<select name="payment"><option>Cash</option><option>M-Pesa</option><option>Credit</option></select></label>
+        <div class="dialog-actions"><button class="secondary-button" type="button" id="cancel-sale">Cancel</button><button class="primary-button" type="submit">Save sale <span aria-hidden="true">→</span></button></div>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
