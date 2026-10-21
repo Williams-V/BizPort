@@ -1,5 +1,4 @@
 # BizPort
-# Mzima BizPilot
 
 **A Business Management and Intelligence Platform for Kenyan SMEs**
 
